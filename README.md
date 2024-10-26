@@ -4,7 +4,7 @@
 - [Descripción](#descripción)
 - [Estructura de la página](#estructura-de-la-página)
 - [Características principales](#características-principales)
-- [Archivos y carpetas](#archivos-y-arpetas)
+- [Archivos y carpetas](#archivos-y-carpetas)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Uso](#uso)
 - [Licencias](#licencias)
