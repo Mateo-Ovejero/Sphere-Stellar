@@ -47,7 +47,7 @@ El proyecto tiene las siguientes secciones:
 Para navegar por las diferentes secciones del sitio, utilice el menú de navegación en la parte superior. Cada sección ofrece información detallada sobre distintos aspectos de la astronomía y la exploración espacial. Algunas páginas incluyen elementos interactivos, como carruseles de imágenes, que presentan descripciones detalladas de los temas visualizados.
 
 ## Licencias
-Este proyecto está bajo la Licencia MIT y las licencias creative commons. Para más detalles, consulte el archivo LICENSE incluido en el repositorio.
+Este proyecto está bajo las licencias creative commons. Para más detalles, consulte el archivo LICENSE incluido en el repositorio.
 
 ## Autor
 - Creado por Mateo Ovejero.
