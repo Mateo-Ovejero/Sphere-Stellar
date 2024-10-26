@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #06131a;
+    padding-top: 80px; /* Ajustar el padding-top para dejar espacio para el nav */
+
+}
+
+.header {
+    position: fixed; /* Asegurar que el nav esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bar-navigator {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #06131a;
+    box-shadow: 0px 1px 10px #fff;
+}
+
+.enlaces {
+    list-style: none;
+    margin: 0 20px; /* Reducir el margen horizontal */
+    border: 3px solid #aae;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #000820;
+    text-align: center;
+}
+
+.enlaces:hover {
+    border: 3px solid #abf;
+    background: #000940;
+}
+
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-enlace{
+    font-size: 50px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+}
+
+.home-enlace a{
+    text-decoration: none;
+    color: #fff
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.aside-4 {
+    margin-top: auto; /* Ajustar el margen superior para evitar colisión con el nav */
+    color: #fff;
+    width: 100%;
+}
+
+.texto-4{
+    margin: 20px;
+}
+
+.texto-4 h1{
+    display: inline;
+    font-size: 60px;
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.container-bg-4{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    background: url('galaxia-3.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.texto{
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    padding: 30px;
+    font-family: "nunito";  
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.main h3{
+    color: #fff;
+    font-size: 40px;
+    text-align: left;
+    padding: 30px;
+    font-family: "Alegreya SC";
+    text-decoration: overline;
+}
+
+h3.title-edit {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    background: linear-gradient(#00f, #fff);
+    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.galaxy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.galaxy-info-window {
+    position: fixed;
+    top: 56.5%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    z-index: 20;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.galaxy-close {
+    color: #eee;
+    margin: 8px 10px;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px 12px;
+    background: #faa;
+}
+
+.galaxy-close:hover{
+    background: #f77;
+}
+
+.galaxy-image {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    cursor: pointer;
+    border-radius: 1em;
+    transition: transform 0.5s, border 0.5s, box-shadow 0.5s;
+
+}
+
+.galaxy-info-text{
+    text-align: justify;
+    font-family: 'Lato';
+    margin: 10px;
+}
+
+.galaxy-image:hover {
+    transform: scale(1.1);
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px#aaa;
+}
+
+.conteinerImages{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.galaxy-info-video{
+    width: 400px;
+    height: 250px;
+}
+
+@media (max-width:600px){
+    .galaxy-info-video{
+        max-width: -webkit-fill-available;
+    }
+}
+
+@media (max-width:600px){
+    .img-de-galaxia{
+        max-width: -webkit-fill-available;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.section{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: "nunito";
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+.footer{
+    display: flex;
+    border-top: solid 2px #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0px 1px 10px #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.footer p{
+    font-size: 30px;
+    color: #fff;
+    font-family: "Alegreya SC";
+    margin: auto;
+}
+
+.redes{
+    display: inline-block;
+    width: auto;
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.instagram{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.github{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.email {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 985px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajustar al tamaño de la barra de navegación */
+        left: 0;
+        background: #06131aee;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .enlaces {
+        margin: 15px 0; /* Separar enlaces verticalmente */
+        width: 50%;
+        text-align: center;
+    }
+    
+    .home-enlace{
+    font-size: 35px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+    }
+}
+
+@media (min-width: 985px) and (max-width: 1300px) {
+    .enlaces {
+        list-style: none;
+        margin: 0 10px; /* Reducir el margen horizontal */
+        border: 3px solid #aae;
+        border-radius: 20px;
+        padding: 5px 15px;
+        background: #000820;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .home-enlace {
+        font-size: 30px;
+        position: relative;
+        font-family: "Nova Mono";
+    }
+}

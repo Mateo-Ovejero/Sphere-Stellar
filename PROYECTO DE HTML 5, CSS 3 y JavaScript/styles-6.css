@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #06131a;
+    padding-top: 80px; /* Ajustar el padding-top para dejar espacio para el nav */
+
+}
+
+.header {
+    position: fixed; /* Asegurar que el nav esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bar-navigator {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #06131a;
+    box-shadow: 0px 1px 10px #fff;
+}
+
+.enlaces {
+    list-style: none;
+    margin: 0 20px; /* Reducir el margen horizontal */
+    border: 3px solid #aae;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #000820;
+    text-align: center;
+}
+
+.enlaces:hover {
+    border: 3px solid #abf;
+    background: #000940;
+}
+
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-enlace{
+    font-size: 50px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+}
+
+.home-enlace a{
+    text-decoration: none;
+    color: #fff
+
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+.titulo-carrusel{
+    padding: 10px;
+    font-size: 60px;
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    letter-spacing: 30px;
+    color: #fff;
+    background: #0007;
+    box-shadow: #fff 0px 0px 40px 20px;
+    border-radius: 5px;
+    animation: aparecer 30s infinite;
+}
+
+@keyframes aparecer{ 
+    0%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+main{
+    margin-top: 5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 100px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+img:nth-child(8) {
+    grid-row: span 3;
+}
+
+img:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(11) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(13) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(15) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(16) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+img:nth-child(17) {
+    grid-row: span 3;
+}
+
+img:nth-child(18) {
+    grid-row: span 3;
+}
+
+img:nth-child(19) {
+    grid-row: span 0;
+    grid-column: span 2;
+}
+
+img:nth-child(20) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+img:nth-child(21) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(23) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(25) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(26) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+img:nth-child(28) {
+    grid-row: span 3;
+}
+
+img:nth-child(30) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(31) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(33) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(35) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(36) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+img:nth-child(37) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+img:nth-child(38) {
+    grid-row: span 3;
+}
+
+img:nth-child(39) {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+img:nth-child(40) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+img:nth-child(41) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(43) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(45) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(46) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+img:nth-child(48) {
+    grid-row: span 3;
+}
+
+img:nth-child(50) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:nth-child(53) {
+    grid-column: span 2;
+    grid-row: span 0;
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+
+.footer{
+    display: flex;
+    border-top: solid 2px #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0px 1px 10px #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.footer p{
+    font-size: 30px;
+    color: #fff;
+    font-family: "Alegreya SC";
+    margin: auto;
+}
+
+.redes{
+    display: inline-block;
+    width: auto;
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.instagram{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.github{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.email {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 985px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajustar al tamaño de la barra de navegación */
+        left: 0;
+        background: #06131aee;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .enlaces {
+        margin: 15px 0; /* Separar enlaces verticalmente */
+        width: 50%;
+        text-align: center;
+    }
+    
+    .home-enlace{
+    font-size: 35px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+    }
+}
+
+@media (min-width: 985px) and (max-width: 1300px) {
+    .enlaces {
+        list-style: none;
+        margin: 0 10px; /* Reducir el margen horizontal */
+        border: 3px solid #aae;
+        border-radius: 20px;
+        padding: 5px 15px;
+        background: #000820;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .home-enlace {
+        font-size: 30px;
+        position: relative;
+        font-family: "Nova Mono";
+    }
+}
+
+@media (max-width: 630px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 0fr 1fr 0fr;
+        grid-template-rows: 0fr 1fr 0fr;
+        grid-auto-rows: 100px;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .titulo-carrusel {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #06131a;
+    padding-top: 80px; /* Ajustar el padding-top para dejar espacio para el nav */
+
+}
+
+/*-----------------------------------------Página-2-----------------------------------------------------------------*/
+
+.header {
+    position: fixed; /* Asegurar que el nav esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bar-navigator {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #06131a;
+    box-shadow: 0px 1px 10px #fff;
+}
+
+.enlaces {
+    list-style: none;
+    margin: 0 20px; /* Reducir el margen horizontal */
+    border: 3px solid #aae;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #000820;
+    text-align: center;
+}
+
+.enlaces:hover {
+    border: 3px solid #abf;
+    background: #000940;
+}
+
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-enlace{
+    font-size: 50px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+}
+
+.home-enlace a{
+    text-decoration: none;
+    color: #fff
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.aside-3 {
+    margin-top: auto; /* Ajustar el margen superior para evitar colisión con el nav */
+    color: #fff;
+    width: 100%;
+}
+
+.texto-3{
+    margin: 20px;
+}
+
+.texto-3 h1{
+    display: inline;
+    font-size: 60px;
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.container-bg-3{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    background: url('universo.png');
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.section{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+    font-family: "nunito";
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.texto{
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    padding: 30px;
+    font-family: "nunito";  
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.main h3{
+    color: #fff;
+    font-size: 40px;
+    text-align: left;
+    padding: 30px;
+    font-family: "Alegreya SC";
+    text-decoration: overline ;
+}
+
+.container{
+    display: flex;
+    margin: 40px;
+    color: #fff;
+}
+
+.container ul{
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Alegreya SC";
+}
+
+.container p{
+    font-family: "nova mono";
+    margin: 10px;
+    text-align: center;
+}
+
+.container img{
+    margin: 30px;
+} 
+
+.description{
+    margin-top: 30px;
+    text-align: justify;
+}
+
+img{
+    border-radius: 2em;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+.footer{
+    display: flex;
+    border-top: solid 2px #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0px 1px 10px #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.footer p{
+    font-size: 30px;
+    color: #fff;
+    font-family: "Alegreya SC";
+    margin: auto;
+}
+
+.redes{
+    display: inline-block;
+    width: auto;
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.instagram{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.github{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.email {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 985px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajustar al tamaño de la barra de navegación */
+        left: 0;
+        background: #06131aee;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .enlaces {
+        margin: 15px 0; /* Separar enlaces verticalmente */
+        width: 50%;
+        text-align: center;
+    }
+    
+    .home-enlace{
+    font-size: 35px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+    }
+}
+
+@media (min-width: 985px) and (max-width: 1300px) {
+    .enlaces {
+        list-style: none;
+        margin: 0 10px; /* Reducir el margen horizontal */
+        border: 3px solid #aae;
+        border-radius: 20px;
+        padding: 5px 15px;
+        background: #000820;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .home-enlace {
+        font-size: 30px;
+        position: relative;
+        font-family: "Nova Mono";
+    }
+}
+
+@media (max-width: 1085px){
+    .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    color: #fff;
+    }
+
+    .container p{
+    font-family: "nova mono";
+    margin: 10px;
+    text-align: left;
+    }
+
+    .container img{
+        margin: 20px;
+    }   
+
+}

@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #06131a;
+    padding-top: 80px; /* Ajustar el padding-top para dejar espacio para el nav */
+
+}
+
+/*-----------------------------------------Página-1-----------------------------------------------------------------*/
+
+.header {
+    position: fixed; /* Asegurar que el nav esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bar-navigator {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #06131a;
+    box-shadow: 0px 1px 10px #fff;
+}
+
+.enlaces {
+    list-style: none;
+    margin: 0 20px; /* Reducir el margen horizontal */
+    border: 3px solid #aae;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #000820;
+    text-align: center;
+}
+
+.enlaces:hover {
+    border: 3px solid #abf;
+    background: #000940;
+}
+
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-enlace{
+    font-size: 50px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+}
+
+.home-enlace a{
+    text-decoration: none;
+    color: #fff
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.aside-2 {
+    margin-top: auto; /* Ajustar el margen superior para evitar colisión con el nav */
+    color: #fff;
+    width: 100%;
+}
+
+.texto-2{
+    margin: 20px 30px;
+}
+
+.texto-2 h1{
+    display: inline;
+    font-size: 60px;
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.container-bg-2{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    background: url('sistema solar.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+main h3{
+    color: #fff;
+    font-size: 40px;
+    text-align: left;
+    padding: 30px;
+    font-family: "Alegreya SC";
+    text-decoration: overline ;
+}
+
+.cda{
+    width: 100%;
+    height: auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.text-description{
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    padding: 30px;
+    font-family: "nunito";    
+}
+
+.container{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 300vh;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    overflow: hidden;
+}
+
+.container-child{
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.sun{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    border-radius: 55%;
+    background: #e8ff40;
+    box-shadow: 0 0 3em #fff;
+}
+
+/*con estos se mueve la orbita*/
+
+.mercury,
+.venus,
+.earth,
+.moon,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto{
+    position: absolute;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 100%;
+}
+
+.mercury{
+    top: 10em;
+    left: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 5s linear infinite;
+}
+
+.venus{
+    top: 2.5em;
+    left: 2.5em;
+    width: 35em;
+    height: 35em;
+    animation: orbit 10s linear infinite;
+}
+
+.earth{
+    top: -5em;
+    left: -5em;
+    width: 50em;
+    height: 50em;
+    animation: orbit 15s linear infinite;
+}
+
+.moon{
+    top: 35px;
+    right: 30px;
+    width: 8em;
+    height: 8em;
+    animation: orbit 5s linear infinite;
+}
+
+.mars{
+    top: -12.5em;
+    left: -12.5em;
+    width: 65em;
+    height: 65em;
+    animation: orbit 20s linear infinite;
+}
+
+.jupiter{
+    top: -20em;
+    left: -20em;
+    width: 80em;
+    height: 80em;
+    animation: orbit 30s linear infinite;
+}
+
+.saturn{
+    top: -28em;
+    left: -28.5em;
+    width: 97em;
+    height: 97em;
+    animation: orbit 40s linear infinite;
+}
+
+.anillo{
+    position: absolute;
+    top: 9em;
+    left: 773px;
+    width: 11em;
+    height: 10em;
+    border: solid;
+    border-color: transparent #CCC #CCC #CCC;
+    border-width: 0px 10px 25px 10px;
+    transform: rotate3d(90, 30, 0, 70deg) rotate(20deg);
+    border-radius: 50%;
+}
+
+.uranus{
+    top: -38em;
+    left: -39em;
+    width: 118em;
+    height: 118em;
+    animation: orbit 50s linear infinite;
+}
+
+.anillo-2{
+    position: absolute;
+    top: 11em;
+    left: 935px;
+    width: 12em;
+    height: 10em;
+    border: solid;
+    border-color: transparent #fff #fff #fff;
+    border-width: 0px 3px 3px 3px;
+    transform: rotate3d(0, 30, 0, 70deg) rotate(90deg);
+    border-radius: 50%;
+}
+
+
+.neptune{
+    top: -48em;
+    left: -50em;
+    width: 140em;
+    height: 140em;
+    animation: orbit 60s linear infinite;
+}
+
+.pluto{
+    top: -58em;
+    left: -60em;
+    width: 160em;
+    height: 160em;
+    animation: orbit 70s linear infinite;
+}
+
+/*con estos se mueve el planeta*/
+
+.mercury::before,
+.venus::before,
+.earth::before, 
+.moon::before, 
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before,
+.neptune::before,
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mercury::before{
+    top: 2em;
+    right: 0em;
+    width: 4em;
+    height: 4em;
+    background: #707070;
+}
+
+.venus::before{
+    top: 3.6em;
+    right: 2.5em;
+    width: 4em;
+    height: 4em;
+    background: #a79358;
+}
+
+.earth::before{
+    top: 5.5em;
+    right: 5em;
+    width: 4em;
+    height: 4em;
+    background: aqua;
+}
+
+.moon::before{
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background: silver;
+}
+
+.mars::before{
+    top: 8em;
+    right: 8em;
+    width: 3em;
+    height: 3em;
+    background: salmon; 
+}
+
+.jupiter::before{
+    top: 10em;
+    right: 7.5em;
+    width: 6em;
+    height: 6em;
+    background: #d3c9ab; 
+
+}
+
+.saturn::before{
+    top: 11em;
+    right: 11em;
+    width: 6em;
+    height: 6em;
+    background: #e7d397;   
+}
+
+.uranus::before{
+    top: 13em;
+    right: 15.5em;
+    width: 6em;
+    height: 6em;
+    background: #8eb1b1;
+    
+}
+
+.neptune::before{
+    top: 17em;
+    right: 18em;
+    width: 6em;
+    height: 6em;
+    background: #1600bf;
+}
+
+
+.pluto::before{
+    top: 21.7em;
+    right: 22em;
+    width: 3em;
+    height: 3em;
+    background: #443c3f;
+}
+
+@keyframes orbit{
+
+    to{
+        rotate: 360deg;
+    }
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.section{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+    font-family: "nunito";
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imagen{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.ccc{
+  height: 400px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(1000, 1000, 1000, 1);
+  background: linear-gradient(#3a4c53,#06131a);
+  padding: 10px;
+  margin: 20px;
+  overflow-y: scroll;
+
+
+}
+
+.ccc h1{
+  text-align: center;
+  margin: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Nova Mono";
+}
+
+.ccc p{
+  text-align: justify;
+  margin: 20px;
+  color: #fff;
+  font-family: 'nunito';
+}
+
+.imagen-1{
+    background: url('the sun.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 170% 100% ;
+}
+
+.imagen-2{
+    background: url('mercury.jpeg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 100% 100% ;
+}
+
+.imagen-3{
+    background: url('venus.jpeg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 170% 100% ;
+}
+
+.imagen-4{
+    background: url('earth.jpeg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 100% 100% ;
+}
+
+.imagen-5{
+    background: url('moon.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 180% 100% ;
+}
+
+.imagen-6{
+    background: url('mars.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 98% 98% ;
+}
+
+.imagen-7{
+    background: url('jupiter.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 180% 100% ;
+}
+
+.imagen-8{
+    background: url('saturn.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 160% 100% ;
+}
+
+.imagen-9{
+    background: url('uranus.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 160% 100% ;
+}
+
+.imagen-10{
+    background: url('neptuno.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 100% 100% ;
+}
+
+.imagen-11{
+    background: url('pluton.jpg');
+    background-size: cover;
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-size: 100% 100% ;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.footer{
+    display: flex;
+    border-top: solid 2px #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0px 1px 10px #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.footer p{
+    font-size: 30px;
+    color: #fff;
+    font-family: "Alegreya SC";
+    margin: auto;
+}
+
+.redes{
+    display: inline-block;
+    width: auto;
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.instagram{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.github{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.email {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 985px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajustar al tamaño de la barra de navegación */
+        left: 0;
+        background: #06131aee;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .enlaces {
+        margin: 15px 0; /* Separar enlaces verticalmente */
+        width: 50%;
+        text-align: center;
+    }
+    
+    .home-enlace{
+    font-size: 35px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+    }
+}
+
+
+@media (min-width: 985px) and (max-width: 1300px) {
+    .enlaces {
+        list-style: none;
+        margin: 0 10px; /* Reducir el margen horizontal */
+        border: 3px solid #aae;
+        border-radius: 20px;
+        padding: 5px 15px;
+        background: #000820;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .home-enlace {
+        font-size: 30px;
+        position: relative;
+        font-family: "Nova Mono";
+    }
+}

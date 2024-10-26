@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #06131a;
+    padding-top: 80px; /* Ajustar el padding-top para dejar espacio para el nav */
+
+}
+
+.header {
+    position: fixed; /* Asegurar que el nav esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bar-navigator {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    background: #06131a;
+    box-shadow: 0px 1px 10px #fff;
+}
+
+.enlaces {
+    list-style: none;
+    margin: 0 20px; /* Reducir el margen horizontal */
+    border: 3px solid #aae;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #000820;
+    text-align: center;
+}
+
+.enlaces:hover {
+    border: 3px solid #abf;
+    background: #000940;
+}
+
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-enlace{
+    font-size: 50px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+}
+
+.home-enlace a{
+    text-decoration: none;
+    color: #fff
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.aside-4 {
+    margin-top: auto; /* Ajustar el margen superior para evitar colisión con el nav */
+    color: #fff;
+    width: 100%;
+}
+
+.texto-4 {
+    margin: 20px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.texto-4 h1 {
+    display: inline;
+    font-size: 60px;
+    font-family: "Montserrat Alternates";
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.container-bg-4 {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el fondo */
+    z-index: 1;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.texto{
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    padding: 30px;
+    font-family: "nunito";  
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.container-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.subcontainer-video{
+    width: 560px;
+    height: 315px;
+    margin: 30px;
+}
+
+.subcontainer-video iframe{
+    width: 100%;
+    height: 100%;
+}
+
+h3{
+    color: #fff;
+    font-size: 40px;
+    text-align: left;
+    padding: 30px;
+    font-family: "Alegreya SC";
+    text-decoration: overline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    align-items: center;
+    transition: transform 0.5s;
+    overflow-x: hidden; /* Cambiado para ocultar contenido desbordante */
+}
+
+.box {
+    overflow-y: scroll;
+    margin-top: 80px;
+    height: 300px;
+    width: 100%;
+    margin: 15px;
+    box-shadow: 0px 0px 10px 2px #fff;
+}
+
+.box p{
+    color: #fff;
+    font-family: nunito;
+}
+
+ .box h2{
+    color: #fff;
+    font-family: AlegreyaSC;
+ }
+
+.container img {
+    margin: 15px;
+    height: 300px;
+    width: 30%;
+    object-fit: cover;
+    cursor: pointer; /* Añadir cursor para indicar que es interactivo */
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
+    margin-left: -120%;
+}
+
+.container:nth-child(odd) {
+    flex-direction: row-reverse;
+    margin-left: 120%;
+}
+
+.container.click-right {
+    transform: translateX(60%);
+}
+
+.container.foxy.click-left {
+    transform: translateX(-60%);
+}
+
+ul li p{
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    padding: 30px 0px;
+    font-family: "nunito";
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.section{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: "nunito";
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+.footer{
+    display: flex;
+    border-top: solid 2px #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0px 1px 10px #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.footer p{
+    font-size: 30px;
+    color: #fff;
+    font-family: "Alegreya SC";
+    margin: auto;
+}
+
+.redes{
+    display: inline-block;
+    width: auto;
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.instagram{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.github{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.email {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 985px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajustar al tamaño de la barra de navegación */
+        left: 0;
+        background: #06131aee;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .enlaces {
+        margin: 15px 0; /* Separar enlaces verticalmente */
+        width: 50%;
+        text-align: center;
+    }
+    
+    .home-enlace{
+    font-size: 35px;
+    position: relative;
+    font-family: "Nova Mono";
+    left: -30px;
+    }
+}
+
+@media (min-width: 985px) and (max-width: 1300px) {
+    .enlaces {
+        list-style: none;
+        margin: 0 10px; /* Reducir el margen horizontal */
+        border: 3px solid #aae;
+        border-radius: 20px;
+        padding: 5px 15px;
+        background: #000820;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .home-enlace {
+        font-size: 30px;
+        position: relative;
+        font-family: "Nova Mono";
+    }
+}
